@@ -1,0 +1,39 @@
+.container {
+    width: 390px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(77, 1, 148);
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+#inputTask {
+    width: 260px;
+    height: 25px;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(223, 223, 223);
+    margin-right: 5px;
+    padding: 3px;
+}
+
+#btn {
+    height: 27px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer; 
+}
+#btn:hover {
+    height: 27px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer; 
+    background-color: rgb(77, 1, 148);
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    
+}

@@ -1,0 +1,30 @@
+.container {
+    width: 390px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(77, 1, 148);
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.label {
+    width: 260px;
+    height: 25px;
+    color: white;
+}
+
+#btnLixeira {
+    width: 35px;
+    height: 35px;
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(77, 1, 148);
+}
+
+#icon-lixeira {
+    width: 100%;
+}
