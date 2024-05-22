@@ -2,10 +2,12 @@ import './css/Tasks.css';
 import icons  from './img/lixeira.svg'
 
 function Tasks(){
+    const tasks = localStorage.getItem('tasks');
+
     return (
         <>
             <div className="container">
-                <div className="label">TEXTO</div>
+                <div className="label">{tasks}</div>
                 <button id='btnLixeira'><img src={icons} id='icon-lixeira'></img></button>
             </div>
         </>
