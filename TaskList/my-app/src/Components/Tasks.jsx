@@ -2,7 +2,7 @@ import './css/Tasks.css';
 import icons  from './img/lixeira.svg'
 
 function Tasks(){
-    const tasks = localStorage.getItem('tasks');
+    const tasks = JSON.parse(localStorage.getItem('tasks'));
 
     return (
         <>

@@ -1,16 +1,15 @@
 import './css/InputTask.css';
 import { useState } from 'react';
 
-const input = document.getElementById('#inputTask');
+let tasks = new Array();
 
-const tasks = [];
-
-function InputTask(){
+function InputTask() {
 
     const [task, setTask] = useState();
 
     function Gravar() {
-        localStorage.setItem('tasks', task);
+        tasks.push({ task: task })
+        localStorage.setItem('tasks', JSON.stringify(tasks));
 
     }
 
@@ -18,8 +17,8 @@ function InputTask(){
         <>
             <div className="container">
                 <div className="inputs">
-                    <input type="text" id='inputTask' onChange={(e) => {setTask(e.target.value)}}/>
-                    <button id='btn' onClick={() => {Gravar()}}>Nova Tarefa</button>
+                    <input type="text" id='inputTask' onChange={(e) => { setTask(e.target.value) }} />
+                    <button id='btn' onClick={() => { Gravar() }}>Nova Tarefa</button>
                 </div>
             </div>
         </>
