@@ -1,16 +1,24 @@
+import Tasks from './Tasks';
 import './css/InputTask.css';
 import { useState } from 'react';
 
-let tasks = new Array();
+const tarefaArray = new Array();
 
 function InputTask() {
 
     const [task, setTask] = useState();
 
     function Gravar() {
-        tasks.push({ task: task })
-        localStorage.setItem('tasks', JSON.stringify(tasks));
+        const tarefa = {
+            tarefa: task
+        }
+        
+        tarefaArray.push(tarefa);
 
+        localStorage.setItem("tarefa", JSON.stringify(tarefaArray));
+        return (
+                <Tasks />
+        )
     }
 
     return (
