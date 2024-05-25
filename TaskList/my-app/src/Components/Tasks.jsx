@@ -1,6 +1,6 @@
 import './css/Tasks.css';
-import icons from './img/lixeira.svg'
 import React from 'react';
+//import icons from './img/lixeira.svg'
 
 function Tasks(prop) {
     // Pegar a string armazenada no localStorage
@@ -10,8 +10,8 @@ function Tasks(prop) {
     //const taskObject = getTask ? JSON.parse(getTask) : [];
 
     // const [] = useState()
-    
-    console.log('task: ' ,prop.getTask)
+    //<img alt="lixeira" src={icons} id='icon-lixeira' />
+    console.log('task: ', prop.getTask)
 
     return (
         <>
@@ -20,9 +20,7 @@ function Tasks(prop) {
                     <>
                         <div className="container1" key={index} id={index}>
                             <div className="label">{e}</div>
-                            <button id='btnLixeira' onClick={() => {prop.deleteTask(index)}}>
-                                <img alt="lixeira" src={icons} id='icon-lixeira' />
-                            </button>
+                            <button id='btnLixeira' onClick={() => { prop.deleteTask(index) }}></button>
                         </div>
                     </>
                 )

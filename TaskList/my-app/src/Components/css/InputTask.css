@@ -6,7 +6,13 @@
     flex-direction: column;
     justify-content: center;
 
-    background-color: bisque;
+    background: linear-gradient(135deg, #262626, #0D0D0D);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
     border-radius: 4px;
 }
 
@@ -30,14 +36,15 @@
 #btn {
     border: none;
     border-radius: 4px;
-    color: rgb(72, 72, 72);
+    color: #ffffff;
     cursor: pointer;
+    background-color: #5068F2;
 }
 
 #btn:hover {
     border: none;
     border-radius: 4px;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     cursor: pointer;
-    background-color: rgb(145, 145, 145);
+    background-color: #6683D9;
 }

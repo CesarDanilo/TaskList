@@ -33,7 +33,7 @@ function InputTask() {
         <div>
             <div className="container">
                 <div className="inputs">
-                    <input type="text" id='inputTask' value={task} onChange={(e) => {
+                    <input required type="text" id='inputTask' value={task} onChange={(e) => {
                         setTask(e.target.value)
                     }} />
                     <button id='btn' onClick={Gravar}>Nova Tarefa</button>
