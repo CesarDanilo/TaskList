@@ -8,16 +8,19 @@ function InputTask() {
     const [getTask, setGetTask] = useState([]);
 
     function Gravar(e) {
-        e.preventDefault();
-        if (!e.target.value) {
-            alert("vazio")
+        e.preventDefault(); // Previne o comportamento padrão do evento
+
+        if (!task) { // Verifica se a variável 'task' está vazia
+            alert("Valor vazio");
+            return;
         } else {
             let newTaskList = [...getTask, task];
             setGetTask(newTaskList);
             localStorage.setItem('tasks', JSON.stringify(newTaskList));
-            setTask('');
+            setTask(''); // Reseta o valor da tarefa
         }
     }
+
 
     function DeleteTask(id) {
         let tasks = JSON.parse(localStorage.getItem('tasks'));
@@ -50,6 +53,7 @@ function InputTask() {
                             }
                         }}
                         placeholder='Digite sua tarefa aqui'
+
                     />
                     <button id='btn' onClick={Gravar}>Nova Tarefa</button>
                 </div>
