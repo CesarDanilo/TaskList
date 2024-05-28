@@ -9,10 +9,14 @@ function InputTask() {
 
     function Gravar(e) {
         e.preventDefault();
-        let newTaskList = [...getTask, task];
-        setGetTask(newTaskList);
-        localStorage.setItem('tasks', JSON.stringify(newTaskList));
-        setTask('');
+        if (!e.target.value) {
+            alert("vazio")
+        } else {
+            let newTaskList = [...getTask, task];
+            setGetTask(newTaskList);
+            localStorage.setItem('tasks', JSON.stringify(newTaskList));
+            setTask('');
+        }
     }
 
     function DeleteTask(id) {
@@ -33,9 +37,20 @@ function InputTask() {
         <div>
             <div className="container">
                 <div className="inputs">
-                    <input required type="text" id='inputTask' value={task} onChange={(e) => {
-                        setTask(e.target.value)
-                    }} />
+                    <input
+                        type="text"
+                        id='inputTask'
+                        value={task}
+                        onChange={(e) => {
+                            setTask(e.target.value)
+                        }}
+                        onKeyPress={(e) => {
+                            if (e.key === 'Enter') {
+                                document.getElementById('btn').click(); // Aciona o botão
+                            }
+                        }}
+                        placeholder='Digite sua tarefa aqui'
+                    />
                     <button id='btn' onClick={Gravar}>Nova Tarefa</button>
                 </div>
             </div>
