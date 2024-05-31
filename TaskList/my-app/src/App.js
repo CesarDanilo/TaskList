@@ -1,13 +1,15 @@
 import './App.css';
-import InputTask from './Components/InputTask';
-//import Tasks from './Components/Tasks';
+import Menu from './Components/Menu';
+import Rotas from './Components/Rotas';
+import { BrowserRouter as Router } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <InputTask />
-    </div>
-  );
+    <Router>
+      <Menu />
+      <Rotas />
+    </Router>
+  )
 }
 
 export default App;
