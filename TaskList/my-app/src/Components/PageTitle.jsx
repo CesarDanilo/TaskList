@@ -1,3 +1,5 @@
+import './css/PageTitle.css'
+
 function PageTitle(props) {
     return (
         <>

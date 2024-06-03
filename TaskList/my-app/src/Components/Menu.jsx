@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
+import './css/Menu.css'
 
 function Menu() {
     return (
@@ -7,10 +8,13 @@ function Menu() {
             <aside>
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link to="/" className='links'>Home</Link>
                     </li>
                     <li>
-                        <Link to="/tarefas">Tasks</Link>
+                        <Link to="/tarefas" className='links'>Tasks</Link>
+                    </li>
+                    <li>
+                        <Link to="/tarefas" className='links'>about</Link>
                     </li>
                 </ul>
             </aside>
