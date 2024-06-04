@@ -6,6 +6,7 @@ function InputTask() {
 
     const [task, setTask] = useState('');
     const [getTask, setGetTask] = useState([]);
+    const [datahora, setDataHora] = useState();
 
     function Gravar(e) {
         e.preventDefault(); // Previne o comportamento padrão do evento
@@ -14,13 +15,12 @@ function InputTask() {
             alert("Valor vazio");
             return;
         } else {
-            let newTaskList = [...getTask, task];
+            let newTaskList = [...getTask, task + " " + datahora];
             setGetTask(newTaskList);
             localStorage.setItem('tasks', JSON.stringify(newTaskList));
             setTask(''); // Reseta o valor da tarefa
         }
     }
-
 
     function DeleteTask(id) {
         let tasks = JSON.parse(localStorage.getItem('tasks'));
@@ -54,6 +54,13 @@ function InputTask() {
                         }}
                         placeholder='Digite sua tarefa aqui'
 
+                    />
+                    <input type="datetime-local"
+                        name=""
+                        id="inputDate"
+                        onChange={(e) => {
+                            setDataHora(e.target.value)
+                        }}
                     />
                     <button id='btn' onClick={Gravar}>Nova Tarefa</button>
                 </div>

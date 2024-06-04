@@ -19,7 +19,6 @@ function Menu() {
                 </ul>
             </aside>
 
-
     )
 }
 
