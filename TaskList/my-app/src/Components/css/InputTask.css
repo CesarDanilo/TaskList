@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
 
-    background: linear-gradient(135deg, #262626, #0D0D0D);
+    background: linear-gradient(150deg, #81dba9, #056e7e);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
@@ -52,7 +52,7 @@
     border-radius: 4px;
     color: #ffffff;
     cursor: pointer;
-    background-color: #5068F2;
+    background-color: #056e7e
 }
 
 #btn:hover {
@@ -60,5 +60,5 @@
     border-radius: 4px;
     color: #ffffff;
     cursor: pointer;
-    background-color: #6683D9;
+    background-color: #55b7e9;
 }
